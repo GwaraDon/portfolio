@@ -1,0 +1,124 @@
+/*--------------9. Portfolio area starts-----------*/
+#portfolio {
+    background: #000;
+}
+
+.gallery-items {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gallery-items .img {
+    display: block;
+    position: relative;
+}
+
+.gallery-items .img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.gallery-items .img img {
+    width: 100%;
+}
+
+.gallery-items:hover .img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    opacity: 1;
+}
+
+.gallery-items:hover .gallery-text {
+    opacity: 1;
+    // -webkit-transition: .3s;
+    // -moz-transition: .3s;
+    // -ms-transition: .3s;
+    // -o-transition: .3s;
+    // transition: .3s;
+}
+
+.gallery-text {
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    text-align: center;
+}
+
+.gallery-text h2 {
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.gallery-text p {
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.gallery-text a.btn-white {
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 200;
+    border: 2px solid #fff;
+    padding: 7px 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    transition: all 0.7s;
+    opacity: 1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        background: #000;
+
+        transition: width .7s ease;
+        z-index: -1;
+
+
+    }
+
+    &:hover {
+        color: #fff;
+
+        &:before {
+
+            width: 100%;
+        }
+    }
+
+}
+
+/*--------------Portfolio area Ends-----------*/

@@ -1,0 +1,64 @@
+// tablet view
+@media screen and (max-width:767px) {
+    ul.nav_ul.desktop-view {
+        display: none;
+    }
+
+    .toggler {
+        display: block !important;
+        position: absolute;
+        color: white;
+        right: 28px;
+        top: 20px;
+        z-index: 1;
+    }
+
+    .mobile-screen {
+        display: block !important;
+        position: absolute;
+        width: 100%;
+        padding: 10px 20px;
+        // background: #000;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .about-left {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .mobile-screen {
+        background: #000;
+        padding: 10px 5px
+    }
+
+    .about-right h1 {
+        font-size: 18px;
+    }
+
+    .about-right p {
+        font-size: 14px;
+    }
+
+    #contact {
+        .top-contact .row {
+            .col-sm-4 {
+                padding: 0 2px;
+
+                h2 {
+                    font-size: 10px;
+                }
+
+                p {
+                    color: #ccc;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+}

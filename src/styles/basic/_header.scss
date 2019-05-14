@@ -1,0 +1,113 @@
+header {
+    position: relative;
+    z-index: 2;
+    padding: 10px 0;
+
+    .logo {
+        img {
+
+            height: 50px;
+        }
+    }
+
+    nav {
+
+        .toggler {
+            display: none;
+
+            button {
+                color: white;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+
+        }
+
+        .mobile-screen {
+            display: none;
+
+            ul {
+                display: flex;
+                // flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 0 40px;
+
+                li {
+                    a {
+                        color: $pure-white;
+                        font-size: 1.2rem;
+                        line-height: 1.7;
+                        color: #d1d1d1;
+                        font-weight: 200;
+                        padding: 10px 20px;
+                        display: inline-block;
+                        position: relative;
+
+                        &:hover,
+                        &.router-link-exact-active {
+                            color: #fff;
+                            text-decoration: none;
+                            font-weight: 200;
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        ul.desktop-view {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0;
+
+            li {
+                a {
+                    color: $pure-white;
+                    font-size: 1.2rem;
+                    line-height: 1.7;
+                    color: #d1d1d1;
+                    font-weight: 200;
+                    padding: 10px 20px;
+                    display: inline-block;
+                    position: relative;
+
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 0px;
+                        height: 2px;
+                        background: #fff;
+                        bottom: 10px;
+                        left: 50%;
+                        z-index: 2;
+                        display: block;
+                        text-align: center;
+                        transform: translate(-50%, -50%);
+                        transition: all 0.4s;
+                        opacity: 0;
+                    }
+
+                    &:hover,
+                    &.router-link-exact-active {
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 200;
+
+                        &::after {
+                            opacity: 1;
+                            width: 30px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
